@@ -1,3 +1,4 @@
+
 @interface UITableView (CCAdditions)
 
 - (UIColor *)separatorColor;

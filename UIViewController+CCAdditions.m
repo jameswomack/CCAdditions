@@ -60,7 +60,7 @@
 }
 
 - (UIBarButtonItem *)backButton; {
-	ILog();	
+
 	ArrowButton *button = [ArrowButton buttonWithType:UIButtonTypeCustom];
 	button.frame = CGRectMake(0, 0, 27, 27);
     [button addTarget:self action:@selector(popToRoot) forControlEvents:UIControlEventTouchUpInside];
@@ -70,7 +70,7 @@
 }
 
 - (UIBarButtonItem *)forwardButton; {
-	ILog();		
+
     ArrowButton *button = [ArrowButton buttonWithType:UIButtonTypeCustom];
 	button.frame = CGRectMake(0, 0, 27, 27);
     [button addTarget:self action:@selector(nextDocument) forControlEvents:UIControlEventTouchUpInside];
@@ -81,11 +81,17 @@
 }
 
 - (void)popToRoot; {
-	ILog();
+
 	[self.navigationController popViewControllerAnimated:YES];
 }
 - (void)nextDocument; {
 	
+}
+
+- (id)vc:(NSString *)className; {
+    Class vcClass = NSClassFromString(className);
+    id vc = [[vcClass alloc] initWithNibName:className bundle:nil];
+    return [vc autorelease];
 }
 
 @end

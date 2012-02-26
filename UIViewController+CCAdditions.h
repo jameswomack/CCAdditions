@@ -16,5 +16,6 @@
 - (UIImage *)theImage;
 - (void)popToRoot;
 - (void)nextDocument;
+- (id)vc:(NSString *)className;
 
 @end

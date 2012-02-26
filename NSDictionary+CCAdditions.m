@@ -1,5 +1,5 @@
-#import "NSDictionary+CCAdditions.h"
 
+#import "NSDictionary+CCAdditions.h"
 
 @implementation NSDictionary (CCAdditions)
 

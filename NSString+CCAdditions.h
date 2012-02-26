@@ -40,4 +40,10 @@
 
 + (NSString *)spanStringFromDouble:(double)theDouble; 
 
+- (NSData *)dataValue; 
+
+- (NSString *)stringByDecodingHTMLEntities;
+
+NSData* DataFromString(NSString* aString);
+
 @end
